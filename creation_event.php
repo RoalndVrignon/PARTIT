@@ -7,6 +7,10 @@ if(!isset($_SESSION['auth'])){
 ?>
 
 
+
+
+
+
 <?php
 require ('inc/footer.php');
 ?>
