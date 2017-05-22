@@ -2,6 +2,7 @@
 if(session_status() == PHP_SESSION_NONE){
     session_start();
 }
+require ('functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,7 +83,7 @@ if(session_status() == PHP_SESSION_NONE){
                         <li><a href="#">Another action</a></li>
                         <li><a href="#">Something else here</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="logout.php">Se déconnecter</a></li>
                     </ul>
                 </li>
             </ul>
