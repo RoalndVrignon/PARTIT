@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebbcba01-b92b-464f-ad26-e2695bc9085c" name="Default" comment="" />
+    <list default="true" id="ebbcba01-b92b-464f-ad26-e2695bc9085c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/soirit/posts.MYD" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/soirit/posts.MYI" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/soirit/posts.frm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/soirit/users.MYD" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/soirit/users.MYI" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/soirit/users.frm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/soirit/db.opt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="projetfin.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -256,15 +266,15 @@
       <workItem from="1494851953715" duration="841000" />
       <workItem from="1494857199613" duration="2721000" />
       <workItem from="1494875734851" duration="16852000" />
-      <workItem from="1495025243475" duration="166000" />
+      <workItem from="1495025243475" duration="342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69349000" />
+    <option name="totallyTimeSpent" value="69525000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26864865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
