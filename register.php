@@ -45,7 +45,7 @@ if(!empty($_POST)){
         $token = str_random('60');
         $req->execute([$_POST['nom'], $_POST['prenom'], $password , $_POST['email'], $token, $token ] );
         $user_id = $pdo->lastInsertId();
-        if(mail($_POST['email'], 'Confirmation de votre compte', "Afin de valider votre compte, merci de cliquer sur ce lien\n\n http://localhost/projetfin/confirm.php?id=$user_id&token=$token, $headers")
+        if(mail($_POST['email'], 'Confirmation de votre compte', "Afin de valider votre compte, merci de cliquer sur ce lien\n\n http://localhost/partit/confirm.php?id=$user_id&token=$token, $headers")
     ){
             $_SESSION['flash']['success'] = 'Un email de confirmation vous a été envoyé afin de valider votre compte';
             ;}

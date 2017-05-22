@@ -1,8 +1,8 @@
 <?php
-require ('inc/header.php');
+require ('inc/connectheader.php');
 $errors = array();
 require_once ('inc\db.php');
-require ('inc/functions.php');
+require_once ('inc/functions.php');
 
 if(!isset($_SESSION['auth'])){
     $_SESSION['flash']['danger'] = "Vous n'avez pas le droit d'accéder à cette page. Veuillez vous connecter d'abord";
