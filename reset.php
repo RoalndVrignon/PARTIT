@@ -15,7 +15,7 @@ if (isset($_GET['id']) && isset($_GET['token'])){
                  $_SESSION['flash']['success']='Votre mot de passe a bien été modifé';
                  $_SESSION['auth'] = $user;
                  $_SESSION['user_id']=$user->id;
-                 header('Location: account.php?id='.$user->id);
+                 header('Location: edit_account.php?id='.$user->id);
                  exit();
              }
         }
