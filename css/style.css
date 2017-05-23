@@ -29,7 +29,9 @@ h2 {
     margin-top: 10vh;
     background-color: rgba(255, 255, 255, 0.5);}
 
-
+.go{
+    background-color: #1abc9c;
+}
 .selection{
     height: 100vh;
     background-color: #f69679;
@@ -101,7 +103,7 @@ a:hover{
 .text-name{
     font-family: 'Raleway', cursive;
     font-size: 20px;
-    color: #2980b9;
+    color: white;
 }
 
 .genre-component {
@@ -175,4 +177,10 @@ li{
     color: black;
     margin-top: 60px !important;
     margin-bottom: 0px !important;
+}
+
+.name{
+    height: 100vh;
+    width: 100%;
+    background-color: #ecf0f1;
 }

@@ -24,6 +24,15 @@ require ('functions.php');
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#submit_template').submit(function () {
+                alert ("tst");
+            })
+        });
+    </script>
 </head>
 <body>
 
