@@ -25,12 +25,21 @@ require ('functions.php');
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(function(){
-            $('#submit_template').submit(function () {
-                alert ("tst");
-            })
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
         });
     </script>
 </head>

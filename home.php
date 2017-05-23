@@ -29,14 +29,14 @@ exit();}
                 </div>
             </div>
             <div id="go" class="button text-center" style="margin-top: 100px">
-                <button type="button"class="go btn btn-lg btn-primary">Allez-y, c'est simple!</button>
+                <a href="#template"><button type="button"class="js-scrollto go btn btn-lg btn-primary" href="#template"> Allez-y, c'est simple!</button></a>
 
             </div>
 
         </div>
 </section>
 
-<section class="template">
+<section class="template" id="template">
     <div id="picker">
         <div class="container-fluid">
             <h1 class="text-center"> Quel type d'évênement? </h1>

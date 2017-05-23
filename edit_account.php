@@ -25,24 +25,20 @@ if(!isset($_SESSION['auth'])){
 //
 require ('inc/db.php');
 
-if (empty($_POST['nom'])){
-    $errors['nom'] = "Vous devez rentrer un mot de passe valide";
-}
-
-if (!empty($_POST) && !empty($_POST['nom'])){
+if (!empty($_POST['nom'])){
 
     require_once ('inc/functions.php');
-    $req = $pdo->prepare('SELECT nom FROM users WHERE nom = ?');
-    $req->execute(['nom' => $_POST['nom']]);
+    $req = $pdo->prepare('SELECT nom FROM users WHERE nom = :nom');
+    $req->execute(array(':nom' => $_POST['nom']));
     $user = $req->fetch();
     if(!empty($errors)){
-        $req = $pdo->prepare('UPDATE users SET nom WHERE nom = ?');
-        $req->execute();
+        $req = $pdo->prepare('SELECT nom FROM users WHERE nom = :nom');
+        $req->execute('UPDATE users SET nom WHERE nom = :nom');
         $_SESSION['flash']['success'] = "ç'est bon";
         exit();
     }
     else{
-        $_SESSION['flash']['danger']='Identifiant ou mot de passe incorrecte';
+        $_SESSION['flash']['danger']="çest pas bon";
     };}
     ?>
 
@@ -51,7 +47,7 @@ if (!empty($_POST) && !empty($_POST['nom'])){
 <form action="" method="POST">
 
 <div id="main content" xmlns="http://www.w3.org/1999/html">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
                     <div class="panel panel-default">
@@ -69,7 +65,7 @@ if (!empty($_POST) && !empty($_POST['nom'])){
             <div class="col-sm-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Compléter mon profil</h3>
+                        <h3 class="panel-title">Modifier et compléter mon profil</h3>
                     </div>
                     <div class="panel-body">
                         <form method="post" autocomplete="off">
@@ -87,7 +83,8 @@ if (!empty($_POST) && !empty($_POST['nom'])){
                                     </div>
                                 </div>
                             </div>
-<!--                            <div class="row">
+
+<--                            <div class="row">
 <!--                                <div class="col-sm-6">-->
 <!--                                    <div class="form-group">-->
 <!--                                        <label for="name">Ville<span class="text-danger">*</span></label>-->

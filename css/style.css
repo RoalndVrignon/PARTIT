@@ -24,10 +24,14 @@ h2 {
     color: black;
 }
 
+.navbar-inverse{
+    background-color: #92cf94 !important;
+}
+
 .cercle {
     height: 20vh;
     margin-top: 10vh;
-    background-color: rgba(255, 255, 255, 0.5);}
+    background-color: transparent;}
 
 .go{
     background-color: #1abc9c;
