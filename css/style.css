@@ -58,10 +58,15 @@ h2 {
     Height : 100vh;
 }
 
-.test {
+.template {
     height: 100vh;
     width: 100%;
     background-color: #F7F7F9;
+}
+
+.choix_template{
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 h3 {
@@ -97,4 +102,77 @@ a:hover{
     font-family: 'Raleway', cursive;
     font-size: 20px;
     color: #2980b9;
+}
+
+.genre-component {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 2px solid #EFEFEF;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.event-picker-select{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#picker{
+    margin: 0;
+    padding: 0;
+}
+
+#genre-component{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 2px solid #EFEFEF;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 70px;
+}
+
+.sound-kind-picker-component{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.kind-picker-select{
+    display: flex;
+    width: 230px;
+    min-width: 150px;
+    height: auto;
+    text-align: center;
+    color: white;
+    background: #D4D6D6;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.kind-picker{
+    font-size: 12px;
+}
+
+li{
+    list-style-type: none;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.template li:hover{
+    background-color: #1abc9c ;
+    text-decoration: none;
+}
+
+.template h1 {
+    font-size: 40px;
+    font-family: 'Raleway', cursive;
+    color: black;
+    margin-top: 60px !important;
+    margin-bottom: 0px !important;
 }
