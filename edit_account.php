@@ -10,48 +10,42 @@ if(!isset($_SESSION['auth'])){
     exit();
 }
 
-if (empty($_POST['nom'])){
-    $errors['nom'] = "Vous devez rentrer un mot de passe valide";
-}
-
-if (!empty($errors)) {
-    $req = $pdo->prepare('UPDATE users SET nom WHERE id = ?');
-    $id = $_GET['id'];
-    $user = $req->execute(['nom' => $_POST['nom']]);
-    $_SESSION['flash']['success'] = "ç'est bon";
-}else{
-    $_SESSION['flash']['danger'] = "ç'est bon";
-
-?>
-require ('inc/db.php');
-
 //if (empty($_POST['nom'])){
 //    $errors['nom'] = "Vous devez rentrer un mot de passe valide";
 //}
 //
-//if (!empty($_POST) && !empty($_POST['nom'])){
+//if (!empty($errors)) {
+//    $req = $pdo->prepare('UPDATE users SET nom WHERE id = ?');
+//    $id = $_GET['id'];
+//    $user = $req->execute(['nom' => $_POST['nom']]);
+//    $_SESSION['flash']['success'] = "ç'est bon";
+//}else {
+//    $_SESSION['flash']['danger'] = "ç'est bon";
+//}
 //
-//    require_once ('inc/functions.php');
-//    $req = $pdo->prepare('SELECT nom FROM users WHERE nom = ?');
-//    $req->execute(['nom' => $_POST['nom']]);
-//    $user = $req->fetch();
-//    if(!empty($errors)){
-//        $req = $pdo->prepare('UPDATE users SET nom WHERE nom = ?');
-//        $req->execute();
-//        $_SESSION['flash']['success'] = "ç'est bon";
-//        exit();
-//    }
-//    else{
-//        $_SESSION['flash']['danger']='Identifiant ou mot de passe incorrecte';
-//    };}
-//
+require ('inc/db.php');
 
-<?php
-$req = 'UPDATE users SET nom WHERE id = ?';
-$req = $pdo->prepare($req);
-$req->bindValue( $_POST['nom'], PDO::PARAM_INT);
-$req -> execute();
-?>
+if (empty($_POST['nom'])){
+    $errors['nom'] = "Vous devez rentrer un mot de passe valide";
+}
+
+if (!empty($_POST) && !empty($_POST['nom'])){
+
+    require_once ('inc/functions.php');
+    $req = $pdo->prepare('SELECT nom FROM users WHERE nom = ?');
+    $req->execute(['nom' => $_POST['nom']]);
+    $user = $req->fetch();
+    if(!empty($errors)){
+        $req = $pdo->prepare('UPDATE users SET nom WHERE nom = ?');
+        $req->execute();
+        $_SESSION['flash']['success'] = "ç'est bon";
+        exit();
+    }
+    else{
+        $_SESSION['flash']['danger']='Identifiant ou mot de passe incorrecte';
+    };}
+    ?>
+
 
 
 <form action="" method="POST">
