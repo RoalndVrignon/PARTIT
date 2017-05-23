@@ -73,11 +73,28 @@ h3 {
     font-weight: bold;
 }
 
+ul{
+    width: 100% !important;
+    text-align: center;
+}
+
 a{
     color: white;
+    font-family: 'Raleway', cursive;
 }
 
 a:hover{
     background-color: transparent !important;
     color: #f39c12 !important;
+}
+
+.img-container{
+    background-color: #1abc9c !important;
+    padding-bottom: 20px;
+}
+
+.text-name{
+    font-family: 'Raleway', cursive;
+    font-size: 20px;
+    color: #2980b9;
 }

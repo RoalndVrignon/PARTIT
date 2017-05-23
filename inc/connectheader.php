@@ -23,7 +23,7 @@ require ('functions.php');
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet">
 </head>
 <body>
 
@@ -93,22 +93,20 @@ require ('functions.php');
 <-- Left section -->
     <nav id="nav-lateral" class="text-center">
             <div class="img-container text-center dgr-hover-pointer">
-                <img style="height: 100px" src="icon/overlap.png"><br/>
+                <img style="height: 100px; margin-top: 10px;" src="img/user.png"><br/>
+                <div class="text-name"><?= $_SESSION['auth']->prenom." ".$_SESSION['auth']->nom; ?></div>
             </div>
         <div class="navbar" style="margin-top: 30px;">
             <div class="discover">
                 <h3>part'it</h3>
-
-                            <ul class="nav navbar-nav text-center">
+                    <ul class="nav navbar-nav">
                                 <li><a href="home.php">Accueil <span class="sr-only">(current)</span></a></li><br/>
-                                <li><a href="list_users.php">Mes amis</a></li><br/>
                                 <li><a href="list_users.php">Liste des utilisateurs</a></li><br/>
-                                <li><a href="list_users.php">Mon profil</a></li><br/>
+                                <li><a href="list_users.php">Mes Amis</a></li>
                                 <li><a href="edit_account.php">Editer mon profil</a></li><br/>
                                 <li role="separator" class="divider" style="color: red"></li><br/>
                                 <li><a href="logout.php">Se déconnecter</a></li><br/>
-                            </ul>
-
+                    </ul>
             </div>
 
         </div>
