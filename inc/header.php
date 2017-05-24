@@ -18,6 +18,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/app.css" rel="stylesheet">
+    <link href="css/noconnect.css" rel="stylesheet">
+
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 
@@ -37,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Soir'it klfjerkf</a>
+            <a class="navbar-brand" href="#">Soir'it</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
