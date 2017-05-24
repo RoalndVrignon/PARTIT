@@ -12,7 +12,7 @@ exit();}
 <section class="home">
 
         <div class="container-fluid">
-            <h1 class="title text-center">Organiser votre évênement</h1>
+            <h1 class="title text-center">Organiser votre évènement</h1>
             <h2 class="text-center">n'a jamais été aussi simple.</h2>
             <div class="row">
                 <div class="col-sm-6 col-xs-6 col-md-3 text-center">
@@ -37,9 +37,14 @@ exit();}
 </section>
 
 <section class="template" id="template">
+    <div id="vue-app">
+        <h2>{{name}}</h2>
+    </div>
+
+
     <div id="picker">
         <div class="container-fluid">
-            <h1 class="text-center"> Quel type d'évênement? </h1>
+            <h1 class="text-center"> Quel type d'évènement? </h1>
 
             <form method="post" id="submit_template">
                 <div id="genre-component">

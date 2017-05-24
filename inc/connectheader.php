@@ -25,8 +25,9 @@ require ('functions.php');
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet">
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script type="text/javascript">
         $(function() {
             $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
