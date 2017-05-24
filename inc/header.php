@@ -40,10 +40,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Soir'it</a>
+            <a class="navbar-brand" href="index.php">Soir'it</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav right">
                 <?php if(isset($_SESSION['auth'])): ?>
                     <li><a href="logout.php">Déconnecter</a></li>
                 <?php else: ?>
