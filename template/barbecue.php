@@ -5,49 +5,56 @@ if(!isset($_SESSION['auth'])){
     header('Location: login.php');
     exit();}
 
-if(!empty($_POST)){
+if(!empty($_POST)) {
 
-$errors = array();
-require 'inc\db.php';
+    $errors = array();
+    require '..\inc\db.php';
 
-    if (empty($_POST['nom']) || !preg_match('/^[a-zA-Z]+$/', $_POST['nom'])){
-    $errors['nom'] = "Veuillez rentrer un nom";
+    if (empty($_POST['nom']) || !preg_match('/^[a-zA-Z]+$/', $_POST['nom'])) {
+        $errors['nom'] = "Veuillez rentrer un nom";
     } else {
-    $req = $pdo->prepare('SELECT id FROM event WHERE nom = ?');
-    $req->execute([$_POST['nom']]);
-    $user = $req->fetch();
+        $req = $pdo->prepare('SELECT id FROM event WHERE nom = ?');
+        $req->execute([$_POST['nom']]);
+        $user = $req->fetch();
     }
 
-    if (empty($_POST['lieu']) || !preg_match('/^[a-zA-Z]+$/', $_POST['prenom'])){
-    $errors['prenom'] = "Veuillez rentrer un lieu";
-    } else {
-    $req = $pdo->prepare('SELECT id FROM event WHERE lieu = ?');
-    $req->execute([$_POST['prenom']]);
-    $user = $req->fetch();
-    }
+    if (empty($_POST['lieu'])) {
+        $errors['lieu'] = "Veuillez rentrer un lieu";
+        $_SESSION['flash']['danger'] = 'ca marche pas';
 
-    if (empty($_POST['lieu']) || !preg_match('/^[a-zA-Z]+$/', $_POST['prenom'])){
-        $errors['prenom'] = "Veuillez rentrer un lieu";
     } else {
         $req = $pdo->prepare('SELECT id FROM event WHERE lieu = ?');
-        $req->execute([$_POST['prenom']]);
+        $req->execute([$_POST['lieu']]);
+        $user = $req->fetch();
+    }
+
+    if (empty($_POST['date'])) {
+        $errors['date'] = "Veuillez rentrer uen date";
+    } else {
+        $req = $pdo->prepare('SELECT id FROM event WHERE date = ?');
+        $req->execute([$_POST['date']]);
+        $user = $req->fetch();
+    }
+
+    if (empty($_POST['description'])) {
+        $errors['description'] = "Veuillez rentrer une description";
+    } else {
+        $req = $pdo->prepare('SELECT id FROM event WHERE description = ?');
+        $req->execute([$_POST['description']]);
         $user = $req->fetch();
     }
 
 
-
-    if(empty($errors)) {
-        $id = $_GET['id'];
-        $req = $pdo->prepare("INSERT INTO event SET nom = ?, lieu =?, date = ?, desctiption = ? ");
+    if (empty($errors)) {
+        $req = $pdo->prepare("INSERT INTO event SET nom = ?, lieu =?, date = ?, description = ? ");
         $req->execute([$_POST['nom'], $_POST['lieu'], $_POST['date'], $_POST['description']]);
-        $user_id = $pdo->lastInsertId();
+
     }
 
-
-    die('Bravo! Votre évenement à bien été crée');
-
-
 }
+
+
+
 
 
 ?>
@@ -113,8 +120,8 @@ require 'inc\db.php';
 <!---->
 <!--        </div>-->
 
-        <div id="go" class="button text-center" style="margin-top: 30px">
-            <a href="#template"><button type="button"class="js-scrollto go btn btn-lg btn-primary" href="#template"> Continuez</button></a>
+        <div id="go" class="button text-center">
+            <button type="submit" class="btn btn-primary">Continuez</button>
 
         </div>
 
