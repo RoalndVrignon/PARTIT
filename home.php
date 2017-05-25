@@ -37,10 +37,20 @@ exit();}
 </section>
 
 <section class="template" id="template">
+
     <div id="vue-app">
-        <h2>{{name}}</h2>
+        <p>{{name}}</p>
     </div>
 
+    <div id="example-1">
+        <button v-on:click="counter += 1">Add 1</button>
+        <p>The button above has been clicked {{ counter }} times.</p>
+    </div>
+
+    <div id="example-3">
+        <button v-on:click="say('hi')">Say hi</button>
+        <button v-on:click="say('what')">Say what</button>
+    </div>
 
     <div id="picker">
         <div class="container-fluid">
@@ -49,8 +59,8 @@ exit();}
             <form method="post" id="submit_template">
                 <div id="genre-component">
                     <div class="sound-kind-picker-component">
-                        <a href=""><li type="submit" class="kind-picker-select kind-picker">Barbecue</li></a>
-                        <a href=""><li class="kind-picker-select kind-picker">Soirée alcoolisé</li></a>
+                        <a><li type="submit" class="kind-picker-select kind-picker">Barbecue</li>
+                        <a><li class="kind-picker-select kind-picker">Soirée alcoolisé</li></a>
                         <a href=""><li class="kind-picker-select kind-picker">Soirée non alcoolisé (BOOM)</li></a>
                         <a href=""><li class="kind-picker-select kind-picker">Dîner</li></a>
                         <a href=""><li class="kind-picker-select kind-picker">Soirée étudiante</li></a>

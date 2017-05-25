@@ -1,0 +1,18 @@
+body{
+    background-color: #ecf0f1   ;
+    margin-bottom: 40px;
+}
+
+.submit{
+    text-align: center !;
+}
+
+.go{
+    background-color: #1abc9c;
+}
+
+#formulaire{
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 40px;
+}

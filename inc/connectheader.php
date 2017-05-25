@@ -20,29 +20,14 @@ require ('functions.php');
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="../css/style.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="../css/template.css" rel="stylesheet">
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <script type="text/javascript">
-        $(function() {
-            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                    if (target.length) {
-                        $('html,body').animate({
-                            scrollTop: target.offset().top
-                        }, 1000);
-                        return false;
-                    }
-                }
-            });
-        });
-    </script>
 </head>
 <body>
 
@@ -67,7 +52,7 @@ require ('functions.php');
 
     <nav id="nav-lateral" class="text-center">
             <div class="img-container text-center dgr-hover-pointer">
-                <img style="height: 100px; margin-top: 10px;" src="img/user.png"><br/>
+                <img style="height: 100px; margin-top: 10px;" src="img/user.png" ><br/>
                 <div class="text-name"><?= $_SESSION['auth']->prenom." ".$_SESSION['auth']->nom; ?></div>
             </div>
         <div class="navbar" style="margin-top: 30px;">

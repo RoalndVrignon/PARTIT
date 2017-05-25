@@ -43,7 +43,7 @@
             <a class="navbar-brand" href="index.php">Soir'it</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav right">
+            <ul class="nav navbar-nav ri">
                 <?php if(isset($_SESSION['auth'])): ?>
                     <li><a href="logout.php">Déconnecter</a></li>
                 <?php else: ?>
