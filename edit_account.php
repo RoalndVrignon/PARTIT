@@ -40,7 +40,8 @@ if (!empty($_POST['nom'])){
     else{
         $_SESSION['flash']['danger']="çest pas bon";
     };}
-    ?>
+
+?>
 
 
 

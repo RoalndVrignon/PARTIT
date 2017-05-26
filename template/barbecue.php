@@ -10,7 +10,7 @@ if(!empty($_POST)) {
     $errors = array();
     require '..\inc\db.php';
 
-    if (empty($_POST['nom']) || !preg_match('/^[a-zA-Z]+$/', $_POST['nom'])) {
+    if (empty($_POST['nom'])) {
         $errors['nom'] = "Veuillez rentrer un nom";
     } else {
         $req = $pdo->prepare('SELECT id FROM event WHERE nom = ?');
@@ -50,6 +50,9 @@ if(!empty($_POST)) {
         $req->execute([$_POST['nom'], $_POST['lieu'], $_POST['date'], $_POST['description']]);
 
     }
+
+    header('Location: ../finalisation.php');
+
 
 }
 
@@ -93,35 +96,35 @@ if(!empty($_POST)) {
 
     </div>
 
-<!--        <div class="container-fluid">-->
-<!--            <h2>Conviez les invités à ramener :</h2>-->
-<!---->
-<!--                <input type="checkbox" id="cbox1" value="checkbox1">-->
-<!--                <label>Chipolatas</label>-->
-<!---->
-<!---->
-<!--            <input type="checkbox" id="cbox2" value="checkbox1">-->
-<!--                <label for="cbox2">Saucisses</label>-->
-<!---->
-<!--            <input type="checkbox" id="cbox2" value="checkbox1">-->
-<!--            <label for="cbox2">Boissons</label>-->
-<!---->
-<!--            <input type="checkbox" id="cbox2" value="checkbox1">-->
-<!--            <label for="cbox2">Boissons alcoolisés</label>-->
-<!---->
-<!--            <input type="checkbox" id="cbox2" value="checkbox1">-->
-<!--            <label for="cbox2">Pain</label>-->
-<!---->
-<!--            <input type="checkbox" id="cbox2" value="checkbox1">-->
-<!--            <label for="cbox2">Salades</label>-->
-<!---->
-<!--            <input type="checkbox" id="cbox2" value="checkbox1">-->
-<!--            <label for="cbox2">Salades</label>-->
-<!---->
-<!--        </div>-->
+        <div class="container-fluid">
+            <h2>Conviez les invités à ramener :</h2>
+
+                <input type="checkbox" id="cbox1" value="checkbox1">
+                <label>Chipolatas</label>
+
+
+            <input type="checkbox" id="cbox2" value="checkbox1">
+                <label for="cbox2">Saucisses</label>
+
+            <input type="checkbox" id="cbox2" value="checkbox1">
+            <label for="cbox2">Boissons</label>
+
+            <input type="checkbox" id="cbox2" value="checkbox1">
+            <label for="cbox2">Boissons alcoolisés</label>
+
+            <input type="checkbox" id="cbox2" value="checkbox1">
+            <label for="cbox2">Pain</label>
+
+            <input type="checkbox" id="cbox2" value="checkbox1">
+            <label for="cbox2">Salades</label>
+
+            <input type="checkbox" id="cbox2" value="checkbox1">
+            <label for="cbox2">Salades</label>
+
+        </div>
 
         <div id="go" class="button text-center">
-            <button type="submit" class="btn btn-primary">Continuez</button>
+            <a href="finalisation.php"><button type="submit" class="btn btn-primary">Continuez</button></a>
 
         </div>
 
