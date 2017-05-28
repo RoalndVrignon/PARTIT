@@ -1,61 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebbcba01-b92b-464f-ad26-e2695bc9085c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/american-football.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/barbecue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/basket.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/bbq.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/boy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/cityscape.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/diner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/dining-room.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/forward.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/four.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/gift.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/glass.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/livingroom.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/no-drinks.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/number.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/one.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/popcorn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/student.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/three.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/two.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/home.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/list_event.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/home.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/view/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app.php" afterPath="$PROJECT_DIR$/view/app.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/view/composer.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/confirm.php" afterPath="$PROJECT_DIR$/view/confirm.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/creation_event.php" afterPath="$PROJECT_DIR$/view/creation_event.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/edit_account.php" afterPath="$PROJECT_DIR$/view/edit_account.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/finalisation.php" afterPath="$PROJECT_DIR$/view/finalisation.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/forget.php" afterPath="$PROJECT_DIR$/view/forget.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/view/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/list_users.php" afterPath="$PROJECT_DIR$/view/list_users.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/view/login.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/logout.php" afterPath="$PROJECT_DIR$/view/logout.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/view/register.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/reset.php" afterPath="$PROJECT_DIR$/view/reset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/connectheader.php" afterPath="$PROJECT_DIR$/inc/connectheader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/header.php" afterPath="$PROJECT_DIR$/inc/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/alcool.php" afterPath="$PROJECT_DIR$/template/alcool.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/anniversaire.php" afterPath="$PROJECT_DIR$/template/anniversaire.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/barbecue.php" afterPath="$PROJECT_DIR$/template/barbecue.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/chill.php" afterPath="$PROJECT_DIR$/template/chill.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/diner.php" afterPath="$PROJECT_DIR$/template/diner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/enville.php" afterPath="$PROJECT_DIR$/template/enville.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/etudiante.php" afterPath="$PROJECT_DIR$/template/etudiante.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/film.php" afterPath="$PROJECT_DIR$/template/film.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/noalcool.php" afterPath="$PROJECT_DIR$/template/noalcool.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/piquenique.php" afterPath="$PROJECT_DIR$/template/piquenique.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/sport.php" afterPath="$PROJECT_DIR$/template/sport.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/surpise.php" afterPath="$PROJECT_DIR$/template/surpise.php" />
-    </list>
+    <list default="true" id="ebbcba01-b92b-464f-ad26-e2695bc9085c" name="Default" comment="" />
     <ignored path="projetfin.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -190,8 +136,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            <state relative-caret-position="400">
+              <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -461,12 +407,12 @@
       <workItem from="1495475385656" duration="1038000" />
       <workItem from="1495478761321" duration="17673000" />
       <workItem from="1495532998331" duration="52398000" />
-      <workItem from="1495970035815" duration="11977000" />
+      <workItem from="1495970035815" duration="12152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163016000" />
+    <option name="totallyTimeSpent" value="163191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -1045,8 +991,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        <state relative-caret-position="400">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="44" />
           <folding />
         </state>
       </provider>
