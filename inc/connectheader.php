@@ -21,13 +21,33 @@ require ('functions.php');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="../css/style.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="../css/template.css" rel="stylesheet">
+
 
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway|Comfortaa" rel="stylesheet">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 
@@ -41,35 +61,14 @@ require ('functions.php');
 
     <?php
     if(!isset($_SESSION['auth'])){
-    $_SESSION['flash']['danger'] = "Vous n'avez pas le droit d'accéder à cette page. Veuillez vous connecter d'abord";
-    header('Location: login.php');
-    exit();}?>
+        $_SESSION['flash']['danger'] = "Vous n'avez pas le droit d'accéder à cette page. Veuillez vous connecter d'abord";
+        header('Location: view/login.php');
+        exit();}?>
 
 <?php endif; ?>
 
 
-<-- Left section
 
-    <nav id="nav-lateral" class="text-center">
-            <div class="img-container text-center dgr-hover-pointer">
-                <img style="height: 100px; margin-top: 10px;" src="img/user.png" ><br/>
-                <div class="text-name"><?= $_SESSION['auth']->prenom." ".$_SESSION['auth']->nom; ?></div>
-            </div>
-        <div class="navbar" style="margin-top: 30px;">
-            <div class="discover">
-                <h3>part'it</h3>
-                    <ul class="nav navbar-nav">
-                                <li><a href="home.php">Accueil <span class="sr-only">(current)</span></a></li><br/>
-                                <li><a href="list_users.php">Liste des utilisateurs</a></li><br/>
-                                <li><a href="list_users.php">Mes Amis</a></li>
-                                <li><a href="edit_account.php">Editer mon profil</a></li><br/>
-                                <li role="separator" class="divider" style="color: red"></li><br/>
-                                <li><a href="logout.php">Se déconnecter</a></li><br/>
-                    </ul>
-            </div>
 
-        </div>
-    </nav>
-<-- Right section
-    <div class="container"  style="Position: relatif;" id="cote-droit">
+
 

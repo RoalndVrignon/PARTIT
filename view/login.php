@@ -1,10 +1,10 @@
 <?php
-require ('inc/db.php');
+require ('../inc/db.php');
 
 
 if (!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
 
-    require ('inc/functions.php');
+    require ('../inc/functions.php');
     $req = $pdo->prepare('SELECT * FROM users WHERE email = :email');
     $req->execute(['email' => $_POST['email']]);
     $user = $req->fetch();
@@ -23,7 +23,7 @@ if (!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
 ?>
 
 
-<?php require ('inc/header.php'); ?>
+<?php require ('../inc/header.php'); ?>
 <div class="container">
     <h1>Se connecter</h1>
 
@@ -46,4 +46,4 @@ if (!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
 
     </form>
 </div>
-<?php require ('inc/footer.php'); ?>
+<?php require ('../inc/footer.php'); ?>

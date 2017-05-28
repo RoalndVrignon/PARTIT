@@ -1,5 +1,5 @@
-<?php require_once ('inc/functions.php');
-require ('inc\db.php');
+<?php require_once ('../inc/functions.php');
+require ('../inc/db.php');
 
 ?>
 
@@ -66,7 +66,7 @@ if(!empty($_POST)){
 
 ?>
 
-<?php require ('inc/header.php'); ?>
+<?php require ('../inc/header.php'); ?>
 
 
 <div class="container">
@@ -120,4 +120,4 @@ if(!empty($_POST)){
 </div>
 </form>
 
-<?php require 'inc/footer.php'; ?>
+<?php require '../inc/footer.php'; ?>

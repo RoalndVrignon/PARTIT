@@ -46,8 +46,12 @@ if(!empty($_POST)) {
 
 
     if (empty($errors)) {
-        $req = $pdo->prepare("INSERT INTO event SET nom = ?, lieu =?, date = ?, description = ? ");
-        $req->execute([$_POST['nom'], $_POST['lieu'], $_POST['date'], $_POST['description']]);
+        if (empty($errors)) {
+            $type=('SELECT id FROM event WHERE type = "Barbecue"');
+            $req = $pdo->prepare("INSERT INTO event SET nom = ?, lieu =?, date = ?, description = ?, type='Barbecue'");
+            $req->execute([$_POST['nom'], $_POST['lieu'], $_POST['date'], $_POST['description']]);
+
+        }
 
     }
 
@@ -62,78 +66,95 @@ if(!empty($_POST)) {
 
 ?>
 
-
-
-<h1 class="text-center">Profitons du soleil</h1>
-
-
-<div id="formulaire" class="container-fluid">
-
-    <form action="" method="POST">
-
+<section id="template">
+    <div class="container-fluid">
         <div class="row">
-            <div class="form-group col-sm-8 col-sm-offset-2">
-                <label for="">Donnez un nom à votre évènement</label>
-                <input type="text" name="nom" class="form-control" />
-            </div>
-
-            <div class="row">
-                <div class="form-group col-sm-12">
-                    <label for="">Lieu</label>
-                    <input type="text" name="lieu" class="form-control"   />
+            <div id="sidebar">
+                <div class="img-container text-center dgr-hover-pointer">
+                    <img src="img/user.png" alt="user">
+                    <div class="text-name"><?= $_SESSION['auth']->prenom." ".$_SESSION['auth']->nom; ?></div>
                 </div>
-
-                <div class="form-group col-sm-12">
-                    <label for="">Date et Heure</label>
-                    <input type="date" name="date" class="form-control" />
+                <ul>
+                    <li><a href="../view/home.php">Accueil</a></li>
+                    <li><a href="../view/list_event.php">Liste des évènements</a></li>
+                    <li><a href="../view/list_users.php">Liste des utilisateurs </a></li>
+                    <li><a href="../view/logout.php">Se déconnecter</a></li>
+                </ul>
+                <div id="sidebar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
+            </div>
 
-                <div class="form-group col-sm-12">
-                    <label for="">Descriptiond de l'évenement</label>
-                    <input type="text" name="description" class="form-control"   />
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $('#sidebar-btn').click(function(){
+                        $('#sidebar').toggleClass('visible');
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    </div>
+
+<div class="container" style="margin-top: 60px">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="template1">Profitons du soleil</h2></br>
+            <h2 class="template2">PART'<span class="it">IT</span></h2>
+        </div>
+        <div class="col-md-6">
+            <form action="" method="POST">
+
+                <div class="row">
+                    <div class="form-group">
+                        <label for="">Donnez un nom à votre évenement</label>
+                        <input type="text" name="nom" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Lieu</label>
+                        <input type="text" name="lieu" class="form-control"   />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Date et Heure</label>
+                        <input type="date" name="date" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Description de l'évenement</label>
+                        <input type="text" name="description" class="form-control"   />
+                    </div>
+
+
                 </div>
-
-
-            </div>
-
-            <div class="container-fluid">
-                <h2>Conviez les invités à ramener :</h2>
-
-                <input type="checkbox" id="cbox1" value="checkbox1">
-                <label>Chipolatas</label>
-
-
-                <input type="checkbox" id="cbox2" value="checkbox1">
-                <label for="cbox2">Saucisses</label>
-
-                <input type="checkbox" id="cbox2" value="checkbox1">
-                <label for="cbox2">Boissons</label>
-
-                <input type="checkbox" id="cbox2" value="checkbox1">
-                <label for="cbox2">Boissons alcoolisés</label>
-
-                <input type="checkbox" id="cbox2" value="checkbox1">
-                <label for="cbox2">Pain</label>
-
-                <input type="checkbox" id="cbox2" value="checkbox1">
-                <label for="cbox2">Salades</label>
-
-                <input type="checkbox" id="cbox2" value="checkbox1">
-                <label for="cbox2">Salades</label>
-
-            </div>
-
-            <div id="go" class="button text-center">
-                <a href="finalisation.php"><button type="submit" class="btn btn-primary">Continuez</button></a>
-
-            </div>
+            </form>
 
 
 
         </div>
-    </form>
+    </div>
+
 
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <div id="go" class="button">
+                <a href="finalisation.php"><button type="submit" class="btn btn-primary">Continuez</button></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</section>
+
 
 
 

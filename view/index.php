@@ -1,4 +1,4 @@
-<?php require ('inc/header.php'); ?>
+<?php require ('../inc/header.php'); ?>
 
 
 
@@ -11,16 +11,16 @@
         <h2 class="text-center">en seulement 4 étapes</h2>
         <div class="row">
             <div class="col-sm-6 col-xs-6 col-md-3 text-center">
-                <img class=" cercle" src="icon/overlap.png">
+                <img class=" cercle" src="../icon/overlap.png">
             </div>
             <div class="col-sm-6 col-xs-6 col-md-3 text-center">
-                <img class="cercle" src="icon/glass.png">
+                <img class="cercle" src="../icon/glass.png">
             </div>
             <div class="col-sm-6 col-xs-6 col-md-3 text-center">
-                <img class="cercle" src="icon/add-user.png">
+                <img class="cercle" src="../icon/add-user.png">
             </div>
             <div class="col-sm-6 col-xs-6 col-md-3 text-center">
-                <img class="cercle" src="icon/overlap.png">
+                <img class="cercle" src="../icon/overlap.png">
             </div>
         </div>
         <div id="go" class="button text-center" style="margin-top: 100px">
@@ -32,4 +32,4 @@
     </div>
 </section>
 
-<?php require 'inc/footer.php'; ?>
+<?php require '../inc/footer.php'; ?>

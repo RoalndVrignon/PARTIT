@@ -17,8 +17,8 @@
     <title>Starter Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/app.css" rel="stylesheet">
-    <link href="css/noconnect.css" rel="stylesheet">
+    <link href="../css/app.css" rel="stylesheet">
+    <link href="../css/noconnect.css" rel="stylesheet">
 
 
 
@@ -40,15 +40,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Soir'it</a>
+            <a class="navbar-brand" href="../view/index.php">Soir'it</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav ri">
                 <?php if(isset($_SESSION['auth'])): ?>
-                    <li><a href="logout.php">Déconnecter</a></li>
+                    <li><a href="../view/logout.php">Déconnecter</a></li>
                 <?php else: ?>
-                <li><a href="register.php">S'inscrire</a></li>
-                <li><a href="login.php">Se connecter</a></li>
+                <li><a href="../view/register.php">S'inscrire</a></li>
+                <li><a href="../view/login.php">Se connecter</a></li>
                 <?php endif; ?>
             </ul>
         </div><!--/.nav-collapse -->

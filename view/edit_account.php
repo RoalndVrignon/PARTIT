@@ -1,8 +1,8 @@
 <?php
-require ('inc/connectheader.php');
+require ('../inc/connectheader.php');
 $errors = array();
-require_once ('inc/functions.php');
-require ('inc/db.php');
+require_once ('../inc/functions.php');
+require ('../inc/db.php');
 
 if(!isset($_SESSION['auth'])){
     $_SESSION['flash']['danger'] = "Vous n'avez pas le droit d'accéder à cette page. Veuillez vous connecter d'abord";
@@ -23,11 +23,11 @@ if(!isset($_SESSION['auth'])){
 //    $_SESSION['flash']['danger'] = "ç'est bon";
 //}
 //
-require ('inc/db.php');
+require ('../inc/db.php');
 
 if (!empty($_POST['nom'])){
 
-    require_once ('inc/functions.php');
+    require_once ('../inc/functions.php');
     $req = $pdo->prepare('SELECT nom FROM users WHERE nom = :nom');
     $req->execute(array(':nom' => $_POST['nom']));
     $user = $req->fetch();

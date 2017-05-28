@@ -2,7 +2,7 @@
 require ('inc/db.php');
 if (!empty($_POST) && !empty($_POST['email'])){
 
-    require ('inc/functions.php');
+    require ('../inc/functions.php');
     $req = $pdo->prepare('SELECT * FROM users WHERE email = :email');
     $req->execute(['email' => $_POST['email']]);
     $user = $req->fetch();
@@ -20,7 +20,7 @@ if (!empty($_POST) && !empty($_POST['email'])){
 ?>
 
 
-<?php require ('inc/header.php'); ?>
+<?php require ('../inc/header.php'); ?>
 <div class="container">
     <h1>Mot de passe oublié</h1>
 
@@ -38,4 +38,4 @@ if (!empty($_POST) && !empty($_POST['email'])){
 
     </form>
 </div>
-<?php require ('inc/footer.php'); ?>
+<?php require ('../inc/footer.php'); ?>

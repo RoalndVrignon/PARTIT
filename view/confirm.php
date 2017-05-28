@@ -3,8 +3,8 @@
 
 $user_id = $_GET['id'];
 $token= $_GET['token'];
-require 'inc/db.php';
-require_once 'inc/functions.php';
+require '../inc/db.php';
+require_once '../inc/functions.php';
 $req = $pdo->prepare('SELECT * FROM users WHERE id = ?');
 $req->execute([$user_id]);
 $user = $req->fetch();

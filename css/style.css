@@ -1,5 +1,5 @@
 body, html{
-height: 100%;
+    height: 100%;
 }
 
 .home {
@@ -15,13 +15,13 @@ height: 100%;
 h1 {
     font-size: 50px;
     font-family: 'Pacifico', cursive;
-    color: black;
+    color:#1abc9c ;
     margin-top: 20px !important;
     margin-bottom: 0px !important;
 }
 
 h2 {
-    color: black;
+    color:#1abc9c ;
 }
 
 .navbar-inverse{
@@ -78,7 +78,7 @@ h2 {
 h3 {
     margin: 0;
     font-size: 14px;
-    color: #6F7B7E;
+    color:#1abc9c ;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: bold;
@@ -187,4 +187,142 @@ li{
     height: 100vh;
     width: 100%;
     background-color: #ecf0f1;
+}
+
+#navbar1 {
+    height:100vh;
+    background-color: #666666;
+
+
+}
+
+#navbar1 img {
+    height:15vh;
+    margin-top:10vh;
+    margin-bottom:2vh;
+    margin-left:10vh;
+}
+#navbar1 .bouton1 {
+    width:35vh;
+    margin-left:60vh;
+    margin-top:10vh;
+}
+#home2 {
+    height:100vh;
+    background:#FFFFFF;
+}
+
+#home2 img{
+    height:15vh;
+    margin-left:15vh;
+    margin-top:10vh;
+}
+
+#home2 .txt{
+    margin-top:10vh;
+}
+
+#sidebar {
+    background:#151718;
+    width:40vh;
+    height:100vh;
+    display:block;
+    position:absolute;
+    left:-40vh;
+    top:0;
+    transition:left 0.3s linear;
+    z-index:1000;
+    opacity:0.9;
+}
+
+#sidebar.visible{
+    left:0;
+    transition:left 0.3s linear;
+    z-index:1000;
+    position:fixed;
+}
+
+ul{
+    margin:0px;
+    padding:0px;
+}
+
+ul li {
+    list-style: none;
+
+}
+
+ul li a {
+    background:#1C1E1F;
+    color:#ccc;
+    border-bottom:1px solid #111;
+    display:block;
+    padding:10px;
+    text-decoration: none;
+    margin-right:2vh;
+}
+
+#sidebar-btn{
+    display:inline-block;
+    vertical-align: middle;
+    width:30px;
+    height:15px;
+    cursor:pointer;
+    margin:20px;
+    position: absolute;
+    top:0px;
+    right:-60px;
+}
+
+#sidebar-btn span{
+    height:2px;
+    margin-bottom:7px;
+    display:block;
+    background-color:#FFFFFF;
+}
+#sidebar-btn span:nth-child(2){
+    width:75%;
+}
+
+
+#sidebar-btn span:nth-child(3){
+    width:50%;
+}
+
+#sidebar img {
+    margin-top:3vh;
+    margin-left:2vh;
+}
+
+.rectangle {
+    margin-left: 20px;
+    background-color: #1abc9c;
+}
+
+#template{
+    height: 100vh;
+    background-color: #f9f2f4;
+}
+
+.template1{
+    font-family: 'Comfortaa';
+    margin-top: 50px;
+    font-size: 40px;
+    color: #2c3e50 !important;
+
+}
+
+.template2{
+    color: #2c3e50 !important;
+}
+
+.it {
+    color: #1abc9c;
+    font-family: 'Pacifico';
+}
+
+.panel-title{
+    font-size: 40px;
+    font-family: 'Comfortaa';
+
 }

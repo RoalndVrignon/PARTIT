@@ -1,5 +1,5 @@
 <?php
-require ('inc/db.php');
+require ('../inc/db.php');
 if (isset($_GET['id']) && isset($_GET['token'])){
     $req = $pdo->prepare('SELECT * FROM users WHERE id = ? AND reset_token = ? AND reset_at > DATE_SUB(NOW(), INTERVAL 30 MINUTE)');
     $req->execute([$_GET['id'], $_GET['token']]);
@@ -31,7 +31,7 @@ if (isset($_GET['id']) && isset($_GET['token'])){
 ?>
 
 
-<?php require ('inc/header.php'); ?>
+<?php require ('../inc/header.php'); ?>
 <div class="container">
     <h1>Réinitialisation du mot de passe</h1>
 
@@ -55,4 +55,4 @@ if (isset($_GET['id']) && isset($_GET['token'])){
 
     </form>
 </div>
-<?php require ('inc/footer.php'); ?>
+<?php require ('../inc/footer.php'); ?>
