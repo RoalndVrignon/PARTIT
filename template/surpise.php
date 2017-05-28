@@ -64,7 +64,7 @@ if(!empty($_POST)) {
 
 
 
-<h1 class="text-center">On va bien manger ce soir</h1>
+<h1 class="text-center">Organisez la meilleure suprise possible</h1>
 
 
 <div id="formulaire" class="container-fluid">

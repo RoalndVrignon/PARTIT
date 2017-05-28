@@ -1,10 +1,13 @@
-<?php require_once ('inc/functions.php') ?>
+<?php require_once ('inc/functions.php');
+require ('inc\db.php');
+
+?>
+
 <?php
 session_start();
 if(!empty($_POST)){
 
     $errors = array();
-    require 'inc\db.php';
 
     if (empty($_POST['nom']) || !preg_match('/^[a-zA-Z]+$/', $_POST['nom'])){
         $errors['nom'] = "Veuillez rentrer votre Nom de famille";

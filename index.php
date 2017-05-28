@@ -1,6 +1,9 @@
 <?php require ('inc/header.php'); ?>
 
 
+
+
+
 <section class="home">
 
     <div class="container-fluid">

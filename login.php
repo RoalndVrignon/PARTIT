@@ -1,5 +1,7 @@
 <?php
 require ('inc/db.php');
+
+
 if (!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
 
     require ('inc/functions.php');

@@ -134,3 +134,11 @@ if(!empty($_POST)) {
 </form>
 
 </div>
+
+
+
+<?php
+require ('../inc/footer.php');
+?>
+
+

@@ -64,7 +64,7 @@ if(!empty($_POST)) {
 
 
 
-<h1 class="text-center">On va bien manger ce soir</h1>
+<h1 class="text-center">Une soirée arrosée s'annonce ?</h1>
 
 
 <div id="formulaire" class="container-fluid">
@@ -89,7 +89,7 @@ if(!empty($_POST)) {
                 </div>
 
                 <div class="form-group col-sm-12">
-                    <label for="">Descriptiond de l'évenement</label>
+                    <label for="">Description de l'évenement</label>
                     <input type="text" name="description" class="form-control"   />
                 </div>
 
