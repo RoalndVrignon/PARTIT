@@ -1,12 +1,13 @@
 body, html{
     height: 100%;
+
 }
 
 .home {
     height: 100vh;
-    width: 100%;
     top: 0;
     background-color: #ecf0f1;
+    position: fixed;
 
 }
 
@@ -14,14 +15,25 @@ body, html{
 
 h1 {
     font-size: 50px;
-    font-family: 'Pacifico', cursive;
-    color:#1abc9c ;
+    font-family: 'Comfortaa', cursive;
+    color:#2c3e50 ;
     margin-top: 20px !important;
     margin-bottom: 0px !important;
 }
 
 h2 {
     color:#1abc9c ;
+}
+
+
+h2.title{
+    color: #fff !important;
+    font-size: 40px;
+}
+
+h3.title{
+    font-size: 40px;
+    font-family: 'Comfortaa';
 }
 
 .navbar-inverse{
@@ -65,9 +77,8 @@ h2 {
 }
 
 .template {
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    background-color: #F7F7F9;
 }
 
 .choix_template{
@@ -191,16 +202,13 @@ li{
 
 #navbar1 {
     height:100vh;
-    background-color: #666666;
-
-
+    background-image: url(../img/home.jpg);
+    background-size:cover ;
+    background-repeat: no-repeat;
 }
 
 #navbar1 img {
     height:15vh;
-    margin-top:10vh;
-    margin-bottom:2vh;
-    margin-left:10vh;
 }
 #navbar1 .bouton1 {
     width:35vh;
@@ -208,8 +216,15 @@ li{
     margin-top:10vh;
 }
 #home2 {
-    height:100vh;
-    background:#FFFFFF;
+    height:115vh;
+    background-color: #f1f2f2;
+}
+
+
+.arrow{
+    bottom: 0;
+    position: absolute ;
+    text-align: center!important;
 }
 
 #home2 img{
@@ -278,7 +293,7 @@ ul li a {
     height:2px;
     margin-bottom:7px;
     display:block;
-    background-color:#FFFFFF;
+    background-color:#34495e;
 }
 #sidebar-btn span:nth-child(2){
     width:75%;
@@ -294,14 +309,9 @@ ul li a {
     margin-left:2vh;
 }
 
-.rectangle {
-    margin-left: 20px;
-    background-color: #1abc9c;
-}
-
 #template{
-    height: 100vh;
-    background-color: #f9f2f4;
+    height: 100%;
+    background-color: #f1f2f2;
 }
 
 .template1{
@@ -326,3 +336,37 @@ ul li a {
     font-family: 'Comfortaa';
 
 }
+
+
+footer{
+    height: 40vh;
+}
+
+.footer{
+    margin-top: 80px !important;
+}
+
+.user-block{
+    margin:5vh;
+    background-color:#f1f2f2;
+    padding:4vh;
+    border: 1px solid #1abc9c;
+    border-radius:10px;
+    color:#2c3e50;
+    font-family: 'Comfortaa';
+
+
+}
+
+
+#nav_event {
+    background-color:#f1f2f2;
+
+}
+#nav_event img {
+    height:15vh;
+    margin-top:10vh;
+    margin-bottom:2vh;
+    margin-left:10vh;
+}
+

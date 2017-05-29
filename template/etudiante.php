@@ -1,5 +1,7 @@
 <?php
 require ('../inc/connectheader.php');
+require ('../inc/db.php');
+
 if(!isset($_SESSION['auth'])){
     $_SESSION['flash']['danger'] = "Vous n'avez pas le droit d'accéder à cette page. Veuillez vous connecter d'abord";
     header('Location: login.php');
@@ -8,7 +10,6 @@ if(!isset($_SESSION['auth'])){
 if(!empty($_POST)) {
 
     $errors = array();
-    require '..\inc\db.php';
 
     if (empty($_POST['nom'])) {
         $errors['nom'] = "Veuillez rentrer un nom";
@@ -45,25 +46,21 @@ if(!empty($_POST)) {
     }
 
 
-    if (empty($errors)) {
-        if (empty($errors)) {
-            $type=('SELECT id FROM event WHERE type = "Barbecue"');
-            $req = $pdo->prepare("INSERT INTO event SET nom = ?, lieu =?, date = ?, description = ?, type='Barbecue'");
+    if (empty($errors)){
+            $type=('SELECT id FROM event WHERE type = "Etudiante"');
+            $req = $pdo->prepare("INSERT INTO event SET nom = ?, lieu =?, date = ?, description = ?, type='etudiant'");
             $req->execute([$_POST['nom'], $_POST['lieu'], $_POST['date'], $_POST['description']]);
-
         }
 
-    }
 
-    header('Location: ../finalisation.php');
+
+
+    header('Location: ../view/home.php');
+    die('votre evenement est cré');
+
 
 
 }
-
-
-
-
-
 ?>
 
 <section id="template">
@@ -71,8 +68,9 @@ if(!empty($_POST)) {
         <div class="row">
             <div id="sidebar">
                 <div class="img-container text-center dgr-hover-pointer">
-                    <img src="img/user.png" alt="user">
                     <div class="text-name"><?= $_SESSION['auth']->prenom." ".$_SESSION['auth']->nom; ?></div>
+                    <div class="text-name"><?= $_SESSION['auth']->email;?></div>
+
                 </div>
                 <ul>
                     <li><a href="../view/home.php">Accueil</a></li>
@@ -100,61 +98,57 @@ if(!empty($_POST)) {
     </div>
     </div>
 
-<div class="container" style="margin-top: 60px">
-    <div class="row">
-        <div class="col-md-6">
-            <h2 class="template1">Profitez tant que vous êtes jeune</h2></br>
-            <h2 class="template2">PART'<span class="it">IT</span></h2>
-        </div>
-        <div class="col-md-6">
-            <form action="" method="POST">
-
-                <div class="row">
-                    <div class="form-group">
-                        <label for="">Donnez un nom à votre évenement</label>
-                        <input type="text" name="nom" class="form-control" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Lieu</label>
-                        <input type="text" name="lieu" class="form-control"   />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Date et Heure</label>
-                        <input type="date" name="date" class="form-control" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Description de l'évenement</label>
-                        <input type="text" name="description" class="form-control"   />
-                    </div>
-
-
-                </div>
-            </form>
-
-
-
-        </div>
-    </div>
-
-
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <div id="go" class="button">
-                <a href="finalisation.php"><button type="submit" class="btn btn-primary">Continuez</button></a>
+    <div class="container" style="margin-top: 60px">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="template1">Profitez tant que vous êtes jeune</h2></br>
+                <h2 class="template2">PART'<span class="it">IT</span></h2>
             </div>
+            <div class="col-md-6">
+                <form action="" method="POST">
 
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="">Donnez un nom à votre évenement</label>
+                            <input type="text" name="nom" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Lieu</label>
+                            <input type="text" name="lieu" class="form-control"   />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Date et Heure</label>
+                            <input type="date" name="date" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Description de l'évenement</label>
+                            <input type="text" name="description" class="form-control"   />
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <div id="go" class="button">
+                                <a href="../view/home.php"><button type="submit" class="btn btn-primary">Continuez</button></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
 
 </section>
+
+
+
 
 
 

@@ -18,8 +18,9 @@ $users = $req->fetchAll(PDO::FETCH_OBJ);
         <div class="row">
             <div id="sidebar">
                 <div class="img-container text-center dgr-hover-pointer">
-                    <img src="../img/user.png" alt="user">
                     <div class="text-name"><?= $_SESSION['auth']->prenom." ".$_SESSION['auth']->nom; ?></div>
+                    <div class="text-name"><?= $_SESSION['auth']->email; ?></div>
+
                 </div>
                 <ul>
                     <li><a href="home.php">Accueil</a></li>

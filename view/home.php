@@ -12,8 +12,9 @@ if(!isset($_SESSION['auth'])){
         <div class="row">
             <div id="sidebar">
                 <div class="img-container text-center dgr-hover-pointer">
-                    <img src="../img/user.png" alt="user">
                     <div class="text-name"><?= $_SESSION['auth']->prenom." ".$_SESSION['auth']->nom; ?></div>
+                    <div class="text-name"><?= $_SESSION['auth']->email;?></div>
+
                 </div>
                 <ul>
                     <li><a href="home.php">Accueil</a></li>
@@ -43,37 +44,31 @@ if(!isset($_SESSION['auth'])){
 
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h2>Organiser votre événement</h2>
-            <h3>n'a jamais été aussi simple.</h3>
-        </div>
-
         <div class="row">
-            <div class="col-md-3 col-xs-6 col-sm-6"> <img src="../img/one.png" alt="icon"><div class="text-center">Appuyez sur commencer</div></div>
-            <div class="col-md-3 col-xs-6 col-sm-6"> <img src="../img/two.png" alt="icon"> <div class="text-center">Choisissez votre évènement </div></div>
-            <div class="col-md-3 col-xs-6 col-sm-6"> <img src="../img/three.png" alt="icon"> <div class="text-center">Invitez vos amis </div></div>
-            <div class="col-md-3 col-xs-6 col-sm-6"> <img src="../img/four.png" alt="icon"> <div class="text-center">Publier l'évènement</div></div>
+            <div class="col-md-12 text-center">
+                <h2 class="title">Organiser votre événement</h2>
+                <h3 class="title">n'a jamais été aussi simple.</h3>
+            </div>
         </div>
-
         <div class="row">
-            <a href="#home2"> <div class="bouton1 col-md-12 col-sm-12 col-xs-12 btn btn-default js-scrollto">Commencez maintenant !</div></a>
+            <div class=" col-xs-12 col-sm-12 col-md-12 arrow">
+                <a href="#home2" class="js-scroll-to"><img src="../img/back.png"></a>
+            </div>
         </div>
-    </div>
 </div>
 </section>
 
 <section id="home2">
-    <div class="container-fluid">
+    <div class="container-fluid home2begin">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                <h2>Choisissez votre évènement ?</h2>
+                <h3 class="title">Choisissez votre évènement</h3>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-3 col-xs-6 col-sm-6"> <a href="../template/barbecue.php"><img src="../img/barbecue.png" alt="icon"></a><div class="text-center">Barbecue</div></div>
-            <div class="col-md-3 col-xs-6 col-sm-6"> <a href="../template/alcool.php"></a> <img src="../img/glass.png" alt="icon"></a> <div class="text-center">Soirée alcoolisé</div></div>
+            <div class="col-md-3 col-xs-6 col-sm-6"> <a href="../template/alcool.php"> <img src="../img/glass.png" alt="icon"></a> <div class="text-center">Soirée alcoolisé</div></div>
             <div class="col-md-3 col-xs-6 col-sm-6"> <a href="../template/noalcool.php"><img src="../img/no-drinks.png" alt="icon"></a> <div class="text-center">Soirée sans alcool</div></div>
             <div class="col-md-3 col-xs-6 col-sm-6"> <a href="../template/diner.php"><img src="../img/dining-room.png" alt="icon"></a> <div class="text-center">Dîner</div></div>
         </div>

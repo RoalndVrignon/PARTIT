@@ -1,5 +1,18 @@
 
 
+<footer>
+    <div class="container footer text-center">
+        <h2 class="template2">PART'<span class="it">IT</span></h2>
+        <div class="row">
+            <div class="col-md-12">
+                Projet de fin d'année 2017 </br>
+                Roland Vrignon - Niolas Rocher
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 </div>
 
 
